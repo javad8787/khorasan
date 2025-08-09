@@ -1,0 +1,11 @@
+import telebot
+
+TOKEN = '8308377706:AAGLCD2N6QYMeIdfJptvVtZh3ig9WP-aN-c'  # توکن خودت رو اینجا بذار
+
+bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    bot.reply_to(message, "سلام! ربات بورس شما فعال است.")
+
+bot.polling()
